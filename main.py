@@ -22,7 +22,7 @@ if uploaded_file:
     # Open the image
     image = Image.open(BytesIO(uploaded_file.read()))
     text_size = st.number_input("Enter the size text", 10)
-    font = ImageFont.truetype("arial.ttf", text_size)
+    font = ImageFont.load_default(text_size)
     # Create a drawing object
     draw = ImageDraw.Draw(image)
 
